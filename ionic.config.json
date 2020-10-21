@@ -1,0 +1,7 @@
+{
+  "name": "BgTest",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
