@@ -10,12 +10,13 @@ import { AppComponent } from './app.component'
 import { AppRoutingModule } from './app-routing.module'
 import { BackgroundMode } from '@ionic-native/background-mode/ngx'
 import { HttpClientModule } from '@angular/common/http'
-
+import { Geolocation } from '@ionic-native/geolocation/ngx';
+import { Diagnostic } from '@ionic-native/diagnostic/ngx';
 @NgModule({
     declarations: [AppComponent],
     entryComponents: [],
     imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule],
-    providers: [BackgroundMode, StatusBar, SplashScreen, { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+    providers: [Diagnostic, Geolocation, BackgroundMode, StatusBar, SplashScreen, { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
     bootstrap: [AppComponent],
 })
 export class AppModule {}
